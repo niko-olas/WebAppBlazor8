@@ -9,6 +9,8 @@
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         <div class="nav-item px-3">
+
+            <!-- Match="NavLinkMatch.All"  garantire che l'algoritmo di corrispondenza esegua corrispondenze solo su tutto il testo nel percorso -->
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
             </NavLink>
@@ -17,6 +19,22 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="weather">
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <!--  <a href="/customers">Customers</a> -->
+            <NavLink class="nav-link"  href="/customers"> 
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Customers
+            </NavLink>
+            <!-- Il componente NavLink è migliore di un elemento di ancoraggio perché imposta automaticamente la sua classe su active se il suo href corrisponde all'URL della posizione corrente -->
+
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="customers/Germany">
+                <span class="bi bi-globe-europe-africa"
+                      aria-hidden="true"></span>
+                Customers in Germany
             </NavLink>
         </div>
     </nav>

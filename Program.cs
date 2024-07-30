@@ -20,6 +20,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
+//configura un componente dell'applicazione root che verrà denominato App.razor
 app.MapRazorComponents<App>();
 
 app.Run();

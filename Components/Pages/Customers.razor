@@ -1,0 +1,50 @@
+﻿@page "/customers/{country?}"
+<!--Per impostare esplicitamente un layout per un componente, utilizza la direttiva @@layout-->
+@* @layout AlternativeLayout *@
+
+
+<div>Country parameter as the value: @Country</div>
+
+
+@code {
+    [Parameter]
+    public string Country { get; set; }
+
+    /// <summary>
+    /// Sostituisci questi metodi per richiamare il codice dopo che il componente ha ricevuto i parametri iniziali dal genitore nell'albero di rendering.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+    }
+
+    /// <summary>
+    /// Sostituisci questi metodi per richiamare il codice dopo che il componente ha ricevuto i parametri e i valori sono stati assegnati alle proprietà.
+    /// </summary>
+    protected override void OnParametersSet()
+    {
+        // If the automatically set property is null, then
+        // set its value to USA.
+        Country = Country ?? "NESSUN COUNTRY";
+    }
+
+    /// <summary>
+    /// Sostituisci questi metodi per richiamare il codice dopo ogni rendering del componente.
+    /// </summary>
+    /// <param name="firstRender"></param>
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+    }
+    
+    /// <summary>
+    /// Sostituisci questo metodo per indicare se il componente deve essere sottoposto a rendering.
+    /// </summary>
+    /// <returns></returns>
+    protected override bool ShouldRender()
+    {
+        return base.ShouldRender();
+    }
+   
+    
+}
